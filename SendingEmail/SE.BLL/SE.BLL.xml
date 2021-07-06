@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SE.BLL</name>
+    </assembly>
+    <members>
+        <member name="T:SE.BLL.DTO.MessageDTO">
+            <summary>
+            Класс содержащий данные для передачи
+            и получения данных с уровня представления
+            </summary>
+        </member>
+        <member name="T:SE.BLL.DTO.MessageInfoDTO">
+            <summary>
+            Класс содержащий данные для получения
+            данных с DAL
+            </summary>
+        </member>
+        <member name="P:SE.BLL.DTO.MessageInfoDTO.Subject">
+            <summary>
+            Тема сообщеня
+            </summary>
+        </member>
+        <member name="P:SE.BLL.DTO.MessageInfoDTO.Body">
+             <summary>
+            Тело сообщения
+             </summary>
+        </member>
+        <member name="P:SE.BLL.DTO.MessageInfoDTO.Date">
+            <summary>
+            Дата создания сообщения
+            </summary>
+        </member>
+        <member name="P:SE.BLL.DTO.MessageInfoDTO.submissionResults">
+            <summary>
+            Результат отправки сообщения
+            </summary>
+        </member>
+        <member name="T:SE.BLL.DTO.SubmissionResultDTO">
+            <summary>
+            Класс содержащий данные для получения
+            данных с DAL
+            </summary>
+        </member>
+        <member name="P:SE.BLL.DTO.SubmissionResultDTO.Recipients">
+            <summary>
+            Адреса получателей
+            </summary>
+        </member>
+        <member name="P:SE.BLL.DTO.SubmissionResultDTO.Result">
+            <summary>
+            Результат отправки сообщения
+            </summary>
+        </member>
+        <member name="P:SE.BLL.DTO.SubmissionResultDTO.FailedMessage">
+            <summary>
+            Сообщения об ошибке
+            </summary>
+        </member>
+        <member name="T:SE.BLL.Responses.RequestResponse`1">
+            <summary>
+            Класс описыващий ответ запроса
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:SE.BLL.Responses.RequestResponse`1.Result">
+            <summary>
+            Результат выполнения
+            </summary>
+        </member>
+        <member name="P:SE.BLL.Responses.RequestResponse`1.ErrorMessage">
+            <summary>
+            Сообщение об ошибке, в случае некоректного запроса
+            или необработанного исключения
+            </summary>
+        </member>
+        <member name="P:SE.BLL.Responses.RequestResponse`1.IsSuccess">
+            <summary>
+            Флаг
+            </summary>
+        </member>
+        <member name="M:SE.BLL.Responses.RequestResponse`1.SuccessResult(`0)">
+            <summary>
+            Присваивает свойству Result
+            результат запроса
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:SE.BLL.Responses.RequestResponse`1.ErrorResult(System.String)">
+            <summary>
+            Присваивает свойству ErrorMessage
+            информацию об ошибке
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:SE.BLL.Services.EmailService">
+            <summary>
+            Сервис для работы с сообщениями
+            </summary>
+        </member>
+        <member name="M:SE.BLL.Services.EmailService.GetMessages">
+            <summary>
+            Метод возвращает список сообщений
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SE.BLL.Services.EmailService.SendingMessage(SE.BLL.DTO.MessageDTO)">
+            <summary>
+            Метод формирует и отправляет сообщение адресатам
+            </summary>
+            <param name="messageDTO">Параметры сообщеня и список получателей</param>
+            <returns></returns>
+        </member>
+        <member name="T:SE.BLL.SMTP.EmailSettings">
+            <summary>
+            Класс описывающий конфигурацию SMTP
+            </summary>
+        </member>
+        <member name="F:SE.BLL.SMTP.EmailSettings.SectionName">
+            <summary>
+            Имя секции в конфигурации
+            </summary>
+        </member>
+        <member name="P:SE.BLL.SMTP.EmailSettings.Username">
+            <summary>
+            Почта откуда производится отправка
+            </summary>
+        </member>
+        <member name="P:SE.BLL.SMTP.EmailSettings.Password">
+            <summary>
+            Пароль к почте
+            </summary>
+        </member>
+        <member name="P:SE.BLL.SMTP.EmailSettings.Host">
+            <summary>
+            Имя хост
+            </summary>
+        </member>
+        <member name="P:SE.BLL.SMTP.EmailSettings.Port">
+            <summary>
+            Порт
+            </summary>
+        </member>
+    </members>
+</doc>

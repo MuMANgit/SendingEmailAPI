@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SendingEmail</name>
+    </assembly>
+    <members>
+        <member name="T:SendingEmail.Controllers.MailsController">
+            <summary>
+            Контроллер для обработки запросов HTTP
+            </summary>
+        </member>
+        <member name="M:SendingEmail.Controllers.MailsController.SendMessage(SE.BLL.DTO.MessageDTO)">
+            <summary>
+            POST метод, формирует и отправлят сообщение адресатам
+            </summary>
+            <param name="messageDTO">Содержит параметры сообщения и получателей</param>
+            <returns>Результат запроса </returns>
+        </member>
+        <member name="M:SendingEmail.Controllers.MailsController.GetMessage">
+            <summary>
+            Get метод, возвращает список сообщений
+            </summary>
+            <returns>Результат запроса</returns>
+        </member>
+    </members>
+</doc>
